@@ -1,14 +1,10 @@
 /* var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%)); */
-@font-face {
-  font-family: "Shrikhand";
-  src: local("Shrikhand-Regular.ttf");
-  font-family: "Roboto";
-  src: local("Roboto-Regular.ttf");
-}
-
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   width: 100%;
+  font-family: 'Roboto', serif;
 }
 
 header {
@@ -64,8 +60,12 @@ main {
 .functioning {
   display: flex;
   flex-direction: column;
-  padding: 20px 20px;
+  padding: 50px 20px;
   gap: 10px;
+}
+
+.functioning h2 {
+  margin: 0;
 }
 
 .btn-functioning {
@@ -77,9 +77,13 @@ main {
 .restaurants {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 50px 20px;
   gap: 20px;
   background: var(--Background, #F6F6F6);
+}
+
+.restaurants h2 {
+  margin: 0;
 }
 
 .card {
@@ -107,17 +111,18 @@ main {
   justify-content: space-between;
 }
 
-.card .card-content .card-title {
+.card .card-content .card-txt .card-title {
   margin: 0;
 }
 
-.card .card-content .card-subtitle {
+.card .card-content .card-txt .card-subtitle {
   margin: 5px 0px;
 }
 
 .card .card-content .card-rating {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 50px;
   height: 50px;
 }
@@ -125,7 +130,6 @@ main {
 .card .card-content .card-rating i {
   width: 22px;
   height: 21px;
-  background-color: #e30000;
 }
 
 a {
@@ -140,7 +144,7 @@ footer {
 }
 
 footer h3 {
-  font-family: Shrinkhand;
+  font-family: 'Shrikhand', serif;
 }
 
 footer ul {
