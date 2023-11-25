@@ -21,12 +21,14 @@ header {
   display: block;
   justify-content: center;
   text-align: center;
+  background: var(--White, #FFF);
 }
 
 header .logo-container {
   height: 44px;
   padding: 14px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  margin: 1px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.169);
 }
 
 header .logo-container img {
@@ -38,7 +40,7 @@ header .location {
   display: flex;
   justify-content: center;
   gap: 17px;
-  padding: 20px;
+  height: 40px;
   background-color: #EAEAEA;
   align-items: center;
 }
@@ -91,28 +93,35 @@ main {
   margin: 0;
 }
 
-.functioning .btn-notify {
-  width: 15px;
-  height: 15px;
-  border-radius: 90px;
-  border: 2px solid black;
-}
-
 .btn-functioning {
   display: flex;
+  position: relative;
+  gap: 25px;
+  padding: 14px 20px;
+  border-radius: 20px;
+  border: none;
   align-items: center;
   justify-content: flex-start;
   background: var(--Background, #F6F6F6);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  gap: 25px;
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: none;
   font-size: 16px;
 }
 
+.btn-functioning .btn-notify {
+  position: absolute;
+  left: -14px;
+  width: 17px;
+  height: 17px;
+  border-radius: 90px;
+  border: 5px solid var(--Primary, #9356DC);
+  background-color: var(--Primary, #9356DC);
+  color: white;
+  font-size: 14px;
+}
+
 .btn-functioning i {
-  margin-left: 33px;
+  font-size: 20px;
+  margin-left: 20px;
   color: #7E7E7E;
 }
 
@@ -192,4 +201,14 @@ footer h3 {
 footer ul {
   padding: 0;
   list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+}
+
+footer ul i {
+  font-size: 13px;
+  width: 11px;
+  margin-right: 10px;
 }
