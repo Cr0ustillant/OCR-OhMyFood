@@ -189,6 +189,7 @@ main {
         }
 
         .card-rating {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -198,6 +199,34 @@ main {
             i {
                 width: 22px;
                 height: 21px;
+            }
+
+            .hovered-heart {
+                opacity: 0;
+                transition: all 0.3s ease-in;
+                background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+                background-clip: text;
+                -webkit-background-clip : text;
+                -webkit-text-fill-color : transparent;
+                z-index: 2;   
+            }
+
+            .default-heart {
+                position: absolute;
+                z-index: 1;
+            }
+
+            .default-heart:hover {
+                
+                ~ .hovered-heart {
+                    opacity: 1;
+                }
+                
+            }
+
+            .hovered-heart:hover {
+                opacity: 1;
+                
             }
         }
     }   
