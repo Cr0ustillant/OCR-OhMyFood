@@ -34,8 +34,8 @@ header {
 
     .logo-container  {
         height: 44px;
-        padding: 14px;
-        margin: 1px;
+        padding: 6px;
+        margin-bottom: 1px;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.169);
         
 
@@ -68,29 +68,29 @@ header {
 main {
     display: flex;
     flex-direction: column;
-
 }
 
                         /* RESERVATION */
 
 .reservation {
-    background-color: var(--Background, #F6F6F6);;
+    background-color: var(--Background, #F6F6F6);
     padding: 25px;
     text-align: center;
 
     h1 {
         margin: auto 20px;
     }
-}
 
-.btn-reservation {
-    border: none;
-    padding: 12px 15px;
-    margin: 20px;
-    border-radius: 25px;
-    color: white;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.264);
-    background: var(--Button-Gradient, linear-gradient(0deg, #9256dc -11.44%, #ff79d9 123.93%));
+
+    button {
+        border: none;
+        padding: 12px 15px;
+        margin: 20px;
+        border-radius: 25px;
+        color: white;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.264);
+        background: var(--Button-Gradient, linear-gradient(0deg, #9256dc -11.44%, #ff79d9 123.93%));
+    }
 }
 
                         /* FUNCTIONING */
@@ -103,40 +103,39 @@ main {
 
     h2 {
         margin: 0;
-    }
-    
-    
-}
+    }   
 
-.btn-functioning {
-    display: flex;
-    position: relative;
-    gap: 25px;
-    padding: 14px 20px;
-    border-radius: 20px;
-    border: none;
-    align-items: center;
-    justify-content: flex-start;
-    background: var(--Background, #F6F6F6);
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    font-size: 16px;
+    .btn-functioning {
+        display: flex;
+        position: relative;
+        gap: 25px;
+        padding: 14px 20px;
+        border-radius: 20px;
+        border: none;
+        align-items: center;
+        justify-content: flex-start;
+        background: var(--Background, #F6F6F6);
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        font-size: 16px;
         
-    .btn-notify {
-        position: absolute;
-        left: -14px;
-        width: 17px;           
-        height: 17px;
-        border-radius: 90px;
-        border: 5px solid var(--Primary, #9356DC);
-        background-color: var(--Primary, #9356DC);
-        color: white;
-        font-size: 14px;
-    }
+        .btn-notify {
+            position: absolute;
+            left: -14px;
+            width: 17px;           
+            height: 17px;
+            border-radius: 90px;
+            border: 5px solid var(--Primary, #9356DC);
+            background-color: var(--Primary, #9356DC);
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
 
-    i {
-        font-size: 20px;
-        margin-left: 20px;
-        color: #7E7E7E;
+        i {
+            font-size: 20px;
+            margin-left: 20px;
+            color: #7E7E7E;
+        }
     }
 }
                         // RESTAURANT
@@ -151,85 +150,88 @@ main {
     h2 {
         margin: 0;
     }
-}
+
                         // CARD
 
-.card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-radius: 15px 15px 15px 15px;
-    background-color: white;
-
-    img {
-        width: 100%;
-        height: 150px;
-        border-radius: 15px 15px 0px 0px;
-        object-fit: cover;
-    }    
-    
-    .card-content {
+    .card {
         display: flex;
-        flex-direction: row;
-        height: 60px;
-        margin: 0;
-        padding: 10px;
-        gap: 10px;
-        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 15px 15px 15px 15px;
+        background-color: white;
 
-        .card-txt {
-
-            .card-title {
-            margin: 0;
-            }
-
-            .card-subtitle {
-                margin: 5px 0px;
-            }
-        }
-
-        .card-rating {
-            position: relative;
+        img {
+            width: 100%;
+            height: 150px;
+            border-radius: 15px 15px 0px 0px;
+            object-fit: cover;
+        }    
+        
+        .card-content {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
+            flex-direction: row;
+            height: 60px;
+            margin: 0;
+            padding: 10px;
+            gap: 10px;
+            justify-content: space-between;
 
-            i {
-                width: 22px;
-                height: 21px;
-            }
+            .card-txt {
 
-            .hovered-heart {
-                opacity: 0;
-                transition: all 0.3s ease-in;
-                background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-                background-clip: text;
-                -webkit-background-clip : text;
-                -webkit-text-fill-color : transparent;
-                z-index: 2;   
-            }
-
-            .default-heart {
-                position: absolute;
-                z-index: 1;
-            }
-
-            .default-heart:hover {
-                
-                ~ .hovered-heart {
-                    opacity: 1;
+                .card-title {
+                margin: 0;
                 }
-                
+
+                .card-subtitle {
+                    margin: 5px 0px;
+                }
             }
 
-            .hovered-heart:hover {
-                opacity: 1;
-                
+            .card-rating {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+
+                i {
+                    width: 22px;
+                    height: 21px;
+                }
+
+                .hovered-heart {
+                    opacity: 0;
+                    transition: all 0.3s ease-in;
+                    background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+                    background-clip: text;
+                    -webkit-background-clip : text;
+                    -webkit-text-fill-color : transparent;
+                       
+                }
+
+                .default-heart {
+                    position: absolute;
+                    z-index: 1;
+                }
+
+                .default-heart:hover {
+                    opacity: 0;
+                    transition: all 0.3s ease-in;
+
+                    ~ .hovered-heart {
+                        opacity: 1;
+                    }
+                    
+                }
+
+                .hovered-heart:hover {
+                    opacity: 1;
+                    z-index: 2;
+                }
             }
-        }
-    }   
+        }   
+    }
 }
 
 a {
@@ -238,12 +240,15 @@ a {
 }
 
 footer {
-    padding: 20px;
+    padding: 12px 25px;
     color: white;
     background-color: var(--Grey, #353535);
 
     h3 {
         font-family: 'Shrikhand', serif;
+        font-weight: normal;
+        margin-top: 5px;
+        font-weight: 400;
     }
 
     ul {
@@ -251,7 +256,7 @@ footer {
         list-style: none;
 
         li {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         i {
