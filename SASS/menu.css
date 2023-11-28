@@ -88,7 +88,7 @@ main section .rating h1 {
 }
 
 main section .rating i {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 main section .rating .hovered-heart {
@@ -122,7 +122,7 @@ main section .rating .default-heart:hover ~ .hovered-heart {
 
 main section .row {
   width: 40px;
-  border-bottom: solid 2px var(--Green, #99E2D0);
+  border-bottom: solid 3px var(--Green, #99E2D0);
 }
 
 main section .dishes {
@@ -144,7 +144,6 @@ main section article {
   justify-content: center;
   text-wrap: nowrap;
   padding: 15px;
-  border-radius: 15px;
   border-radius: 15px;
   background: var(--White, #FFF);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
@@ -174,6 +173,11 @@ main section article span {
 
 main section article .ticket i {
   display: none;
+  font-size: 20px;
+  width: 18px;
+  color: var(--Green, #99E2D0);
+  border-radius: 90px;
+  background-color: white;
 }
 
 main section article:hover {
@@ -194,7 +198,6 @@ main section article:hover .ticket {
   height: 6.37%;
   right: 12px;
   transition: 0.5s ease-in;
-  transition: 0.5s ease-out;
   background: var(--Green, #99E2D0);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -203,7 +206,7 @@ main section article:hover .ticket {
 main section article:hover .ticket i {
   display: flex;
   justify-content: center;
-  margin: 30px;
+  margin: 30px 30px 30px 25px;
 }
 
 main .btn {
@@ -224,6 +227,10 @@ main .btn button {
   background: var(--Button-Gradient, linear-gradient(0deg, #9256dc -11.44%, #ff79d9 123.93%));
 }
 
+main .btn button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
 footer {
   padding: 12px 25px;
   color: white;
@@ -239,6 +246,7 @@ footer h3 {
 
 footer ul {
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -247,7 +255,7 @@ footer ul li {
 }
 
 footer ul i {
-  font-size: 13px;
   width: 11px;
+  font-size: 13px;
   margin-right: 10px;
 }

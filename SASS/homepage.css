@@ -25,8 +25,8 @@ header {
 }
 
 header .logo-container {
-  height: 44px;
-  padding: 6px;
+  height: 36px;
+  padding: 14px 89px 13px 89px;
   margin-bottom: 1px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.169);
 }
@@ -73,12 +73,16 @@ main {
 
 .reservation button {
   border: none;
-  padding: 12px 15px;
+  padding: 16px 25px;
   margin: 20px;
   border-radius: 25px;
   color: white;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.264);
   background: var(--Button-Gradient, linear-gradient(0deg, #9256dc -11.44%, #ff79d9 123.93%));
+}
+
+.reservation button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
 /* FUNCTIONING */
@@ -96,22 +100,23 @@ main {
 .functioning .btn-functioning {
   display: flex;
   position: relative;
-  gap: 25px;
-  padding: 14px 20px;
-  border-radius: 20px;
-  border: none;
   align-items: center;
   justify-content: flex-start;
+  gap: 25px;
+  margin-left: 12px;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 20px;
+  font-size: 16px;
   background: var(--Background, #F6F6F6);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  font-size: 16px;
 }
 
 .functioning .btn-functioning .btn-notify {
   position: absolute;
-  left: -14px;
-  width: 17px;
-  height: 17px;
+  left: -10px;
+  width: 14px;
+  height: 14px;
   border-radius: 90px;
   border: 5px solid var(--Primary, #9356DC);
   background-color: var(--Primary, #9356DC);
@@ -124,6 +129,13 @@ main {
   font-size: 20px;
   margin-left: 20px;
   color: #7E7E7E;
+}
+
+.functioning .btn-functioning i:hover {
+  background: var(--Primary, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .restaurants {
@@ -148,7 +160,7 @@ main {
 
 .restaurants .card img {
   width: 100%;
-  height: 150px;
+  height: 230px;
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
 }
@@ -158,7 +170,7 @@ main {
   flex-direction: row;
   height: 60px;
   margin: 0;
-  padding: 10px;
+  padding: 10px 10px 3px 12px;
   gap: 10px;
   justify-content: space-between;
 }
@@ -169,11 +181,13 @@ main {
 
 .restaurants .card .card-content .card-txt .card-subtitle {
   margin: 5px 0px;
+  font-size: 17px;
+  font-weight: 300;
 }
 
 .restaurants .card .card-content .card-rating {
-  position: relative;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   width: 50px;
@@ -233,6 +247,7 @@ footer h3 {
 
 footer ul {
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -241,7 +256,7 @@ footer ul li {
 }
 
 footer ul i {
-  font-size: 13px;
   width: 11px;
+  font-size: 13px;
   margin-right: 10px;
 }
