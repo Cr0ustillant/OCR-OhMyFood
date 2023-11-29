@@ -11,11 +11,6 @@ body {
   align-items: center;
 }
 
-a {
-  text-decoration: none;
-  color: unset;
-}
-
 .main-container {
   display: flex;
   flex-direction: column;
@@ -88,7 +83,7 @@ main section .rating h1 {
 }
 
 main section .rating i {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 main section .rating .hovered-heart {
@@ -113,11 +108,15 @@ main section .rating .hovered-heart:hover {
 
 main section .rating .default-heart:hover {
   opacity: 0;
-  transition: all 0.3s ease-in;
 }
 
 main section .rating .default-heart:hover ~ .hovered-heart {
   opacity: 1;
+  transition: all 0.3s ease-in;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 main section .row {
@@ -197,7 +196,7 @@ main section article:hover .ticket {
   width: 18%;
   height: 6.37%;
   right: 12px;
-  transition: 0.5s ease-in;
+  transition: all 0.5s ease-in;
   background: var(--Green, #99E2D0);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -229,6 +228,11 @@ main .btn button {
 
 main .btn button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
+a {
+  text-decoration: none;
+  color: unset;
 }
 
 footer {
