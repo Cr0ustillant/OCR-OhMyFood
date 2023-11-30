@@ -78,6 +78,7 @@ main {
         
         .rating {
             display: flex;
+            justify-content: space-between;
             position: relative;
             align-items: center;
 
@@ -88,12 +89,17 @@ main {
                 font-family: 'Shrikhand', serif;
             }
 
-            i {
-                margin-left: 30px;
+            .heart-container {
+                display: flex;
+                width: 22px;
+                margin-right: 25px;
             }
+
 
             .hovered-heart {
                 opacity: 0;
+                position: absolute;
+                font-size: 22px;
                 transition: all 0.3s ease-in;
                 background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
                 background-clip: text;
@@ -103,7 +109,8 @@ main {
 
             .default-heart {
                 position: absolute;
-                bottom: 9px;
+                bottom: 10px;
+                font-size: 22px;
                 z-index: 1;
             }
 

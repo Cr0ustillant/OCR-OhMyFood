@@ -71,6 +71,7 @@ main section {
 
 main section .rating {
   display: flex;
+  justify-content: space-between;
   position: relative;
   align-items: center;
 }
@@ -82,12 +83,16 @@ main section .rating h1 {
   font-family: 'Shrikhand', serif;
 }
 
-main section .rating i {
-  margin-left: 30px;
+main section .rating .heart-container {
+  display: flex;
+  width: 22px;
+  margin-right: 25px;
 }
 
 main section .rating .hovered-heart {
   opacity: 0;
+  position: absolute;
+  font-size: 22px;
   transition: all 0.3s ease-in;
   background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
   background-clip: text;
@@ -97,7 +102,8 @@ main section .rating .hovered-heart {
 
 main section .rating .default-heart {
   position: absolute;
-  bottom: 9px;
+  bottom: 10px;
+  font-size: 22px;
   z-index: 1;
 }
 
