@@ -237,13 +237,12 @@ main {
         height: 50px;
 
         i {
-          width: 22px;
-          height: 21px;
+          font-size: 22px;
         }
 
         .hovered-heart {
           opacity: 0;
-          transition: all 0.3s ease-in;
+          transition: opacity 0.3s ease-in;
           background: var(
             --Button-Gradient,
             linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%)
@@ -265,7 +264,7 @@ main {
 
         .default-heart:hover {
           opacity: 0;
-          transition: all 0.3s ease-in;
+          transition: opacity 0.3s ease-in;
 
           ~ .hovered-heart {
             opacity: 1;
@@ -354,7 +353,7 @@ footer {
                 grid-template-rows: 46% 46%;
                 
                 .card {
-                    width: 490px;
+                    width: 100%;
                     object-fit: cover;
                 }
             }
