@@ -1,0 +1,54 @@
+header {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  background: var(--White, #FFF);
+}
+
+header .logo-container {
+  display: flex;
+  height: 44px;
+  padding: 6px;
+}
+
+header .logo-container i {
+  font-size: 16px;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  margin-right: 75px;
+}
+
+header .logo-container img {
+  width: 162px;
+  height: 50px;
+}
+
+footer {
+  padding: 12px 25px;
+  color: white;
+  background-color: var(--Grey, #353535);
+}
+
+footer h3 {
+  font-family: 'Shrikhand', serif;
+  font-weight: normal;
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 8px;
+}
+
+footer ul i {
+  width: 11px;
+  font-size: 13px;
+  margin-right: 10px;
+}
