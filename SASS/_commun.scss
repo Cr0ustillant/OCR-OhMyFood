@@ -1,0 +1,178 @@
+// Variable
+/* var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%)); */
+// var(--Background, #F6F6F6);
+// var(--Grey, #353535);
+// background: var(--Primary, #9356DC);
+// background: var(--White, #FFF);
+// background: var(--Green, #99E2D0);
+
+// https://zestedesavoir.com/tutoriels/672/reprenez-le-controle-de-vos-feuilles-de-style-avec-sass/les-bases-de-sass/la-directive-import/?utm_medium=email&utm_content=nov-18-has-completed-mentoring-session-student&bsft_clkid=c80a004f-84ff-4a36-b992-319fb5181947&bsft_uid=04e27a0f-2461-4228-879f-75c439e0010e&bsft_mid=977ca3ac-387d-4fc8-863d-ffef06d6d033&bsft_eid=7244055d-47f0-a6f2-c394-7a20ebb3a726&bsft_txnid=59f21314-2d6e-4e17-9fcb-d65e29a37bbc&bsft_mime_type=html&bsft_ek=2023-12-04T12%3A19%3A10Z&bsft_aaid=a265d396-7432-4eb2-9c9a-ba5eea75629e&bsft_tv=14
+
+
+                // FONT
+
+* {
+    font-family: 'Roboto', serif;
+}
+
+// .loader {
+//   height: 100%;
+//   width: 100%;
+//   background-color: rgb(255, 255, 255);
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   opacity: 1;
+//   z-index: 3;
+//   animation: loader-on 3s linear forwards;
+  
+
+//   .loader-container {
+//     display: flex;
+//     position: absolute;
+//     top: 20%;
+//     left: 42%;
+//     width: 300px;
+//     height: 300px;
+//     border-radius: 30px;
+//     border: solid black 2px;
+//     flex-direction: column;
+//     justify-content:space-around;
+//     align-items: center;
+//     font-size: 24px;
+//     background:linear-gradient(rgba(163, 163, 163, 0.9) , rgba(97, 97, 97, 0.887));
+//     box-shadow: 8px 8px 10px 2px rgba(0, 0, 0, 0.605);
+//     animation: loader-on 5s linear forwards;
+
+//     img {
+//         margin-top: 10px;
+//         height: 30px;
+//     }
+      
+//     span {
+//         color: white;
+//     }
+    
+//     .point-container {
+//       display: flex;
+//       padding: 100px;
+
+//       .point {
+//         width: 30px;
+//         height: 30px;
+//         margin-right: 5px;
+//         border: solid black 2px;
+//         border-radius: 90px;
+//         background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+//         animation: loading 1s linear infinite;
+//       }
+
+//       .point:nth-child(2) {
+//         left: 75px;
+//         animation-delay: 0.3s ;
+//         }
+
+//       .point:nth-child(3) {
+//         left: 150px;
+//         animation-delay: 0.5s ;
+//       }
+//     }
+//   }
+// }
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  
+  .logo-container  {
+      display: flex;
+      
+      width: 100%;
+      height: 44px;
+      padding: 6px;
+      
+      i {
+          font-size: 16px;
+          margin-left: 15px;
+          margin-top: 15px;
+          margin-bottom: 5px;
+          margin-right: 75px;
+      }
+  }
+}
+  
+footer {
+    padding: 12px 25px;
+    color: white;
+    background-color: var(--Grey, #353535);
+
+    h3 {
+        font-family: 'Shrikhand', serif;
+        font-weight: normal;
+        margin-top: 5px;
+        font-weight: 400;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        i {
+            width: 11px;
+            font-size: 13px;
+            margin-right: 10px;
+        }
+    }
+}
+
+                // Button
+
+button {
+    border: none;
+    margin: 20px 0px;
+    width: 218px;
+    padding: 16px 10px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background: var(
+        --Button-Gradient,
+      linear-gradient(0deg, #9256dc -11.44%, #ff79d9 123.93%)
+    );
+    transition: opacity 0.5s, box-shadow 0.5s ;
+    opacity: 1;
+  
+    &:hover {
+      opacity: 0.9;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);    }
+}
+                // Animation
+
+//  @keyframes loader-on {
+//     from {
+//     }
+//     to {
+//       display: none;
+//     }
+//   }
+
+//   @keyframes loading {
+//     0% {
+//       transform: scale(1);
+//     }
+//     50% {
+//       transform: scale(0.5);
+//     }
+//     100% {
+//       transform: scale(1);
+//     }
+//   }
