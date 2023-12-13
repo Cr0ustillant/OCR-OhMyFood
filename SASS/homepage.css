@@ -4,29 +4,55 @@
   font-family: 'Roboto', serif;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 header {
   display: flex;
-  flex-direction: column;
   width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #EAEAEA;
+}
+
+header i {
+  font-weight: 500;
+  margin-right: 15px;
+  font-style: normal;
+}
+
+header p {
+  font-weight: 500;
+  font-style: normal;
 }
 
 header .logo-container {
   display: flex;
+  position: relative;
   width: 100%;
-  height: 44px;
-  padding: 6px;
-}
-
-header .logo-container i {
-  font-size: 16px;
-  margin-left: 15px;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  margin-right: 75px;
+  gap: 42px;
+  padding: 14px 17px 13px 17px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 header .logo-container img {
   width: 162px;
+}
+
+header .logo-container .arrow {
+  position: absolute;
+  left: 18px;
+}
+
+header .logo-container .arrow i {
+  font-size: 25px;
 }
 
 footer {
@@ -100,8 +126,7 @@ main {
   flex-direction: column;
 }
 
-/* RESERVATION */
-.reservation {
+main .reservation {
   display: flex;
   flex-direction: column;
   padding: 30px 20px;
@@ -110,36 +135,35 @@ main {
   background-color: var(--Background, #f6f6f6);
 }
 
-.reservation h1 {
+main .reservation h1 {
   margin: 0px 25px;
 }
 
-.reservation p {
+main .reservation p {
   margin: 18px 0px;
   font-size: 18px;
   font-weight: 300;
 }
 
-/* FUNCTIONING */
-.functioning {
+main .functioning {
   display: flex;
   flex-direction: column;
   padding: 50px 20px;
   gap: 30px;
 }
 
-.functioning h2 {
+main .functioning h2 {
   margin: 0;
 }
 
-.functioning .btn-container {
+main .functioning .btn-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.functioning .btn-functioning {
+main .functioning .btn-functioning {
   display: flex;
   position: relative;
   align-items: center;
@@ -156,7 +180,7 @@ main {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
-.functioning .btn-functioning .btn-notify {
+main .functioning .btn-functioning .btn-notify {
   position: absolute;
   left: -12px;
   width: 14px;
@@ -169,20 +193,20 @@ main {
   font-size: 14px;
 }
 
-.functioning .btn-functioning i {
+main .functioning .btn-functioning i {
   font-size: 20px;
   margin-left: 20px;
   color: #7e7e7e;
 }
 
-.functioning .btn-functioning i:hover {
+main .functioning .btn-functioning i:hover {
   background: var(--Primary, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.restaurants {
+main .restaurants {
   display: flex;
   flex-direction: column;
   padding: 50px 20px;
@@ -190,17 +214,17 @@ main {
   background: var(--Background, #f6f6f6);
 }
 
-.restaurants h2 {
+main .restaurants h2 {
   margin: 0;
 }
 
-.restaurants .cards-container {
+main .restaurants .cards-container {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.restaurants .cards-container .card {
+main .restaurants .cards-container .card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -209,14 +233,14 @@ main {
   background-color: white;
 }
 
-.restaurants .cards-container .card img {
+main .restaurants .cards-container .card img {
   width: 100%;
   height: 200px;
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
 }
 
-.restaurants .cards-container .card .new {
+main .restaurants .cards-container .card .new {
   display: flex;
   text-align: center;
   position: absolute;
@@ -228,10 +252,10 @@ main {
   font-weight: 500;
   z-index: 2;
   color: var(--Green-Font, #008766);
-  background-color: var(--Green, #99E2D0);
+  background-color: var(--Green, #99e2d0);
 }
 
-.restaurants .cards-container .card .card-content {
+main .restaurants .cards-container .card .card-content {
   display: flex;
   flex-direction: row;
   height: 60px;
@@ -241,17 +265,17 @@ main {
   justify-content: space-between;
 }
 
-.restaurants .cards-container .card .card-content .card-txt .card-title {
+main .restaurants .cards-container .card .card-content .card-txt .card-title {
   margin: 0;
 }
 
-.restaurants .cards-container .card .card-content .card-txt .card-subtitle {
+main .restaurants .cards-container .card .card-content .card-txt .card-subtitle {
   margin: 5px 0px;
   font-size: 17px;
   font-weight: 300;
 }
 
-.restaurants .cards-container .card .card-rating {
+main .restaurants .cards-container .card .card-rating {
   display: flex;
   position: absolute;
   bottom: 0;
@@ -260,11 +284,11 @@ main {
   height: 50px;
 }
 
-.restaurants .cards-container .card .card-rating i {
+main .restaurants .cards-container .card .card-rating i {
   font-size: 22px;
 }
 
-.restaurants .cards-container .card .card-rating .hovered-heart {
+main .restaurants .cards-container .card .card-rating .hovered-heart {
   opacity: 0;
   transition: opacity 0.5s ease-in;
   background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%));
@@ -273,27 +297,22 @@ main {
   color: transparent;
 }
 
-.restaurants .cards-container .card .card-rating .hovered-heart:hover {
+main .restaurants .cards-container .card .card-rating .hovered-heart:hover {
   opacity: 2;
   z-index: 1;
 }
 
-.restaurants .cards-container .card .card-rating .default-heart {
+main .restaurants .cards-container .card .card-rating .default-heart {
   position: absolute;
   z-index: 1;
 }
 
-.restaurants .cards-container .card .card-rating .default-heart:hover {
+main .restaurants .cards-container .card .card-rating .default-heart:hover {
   opacity: 0;
 }
 
-.restaurants .cards-container .card .card-rating .default-heart:hover ~ .hovered-heart {
+main .restaurants .cards-container .card .card-rating .default-heart:hover ~ .hovered-heart {
   opacity: 1;
-}
-
-a {
-  text-decoration: none;
-  color: unset;
 }
 
 @media (min-width: 1024px) {
@@ -311,7 +330,6 @@ a {
     padding: 50px 180px;
   }
   .main-container .functioning .btn-container {
-    display: flex;
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -346,7 +364,7 @@ a {
   .main-container footer li:nth-child(even) {
     margin-right: 55px;
   }
-  .main-container footer li:nth-child(1n+3) {
+  .main-container footer li:nth-child(1n + 3) {
     font-weight: 400;
   }
   .main-container footer ul {
@@ -359,10 +377,7 @@ a {
 }
 
 @media (min-width: 1440px) {
-  .main-container {
-    max-width: 1440px;
-  }
-  .main-container .btn-container {
+  .main-container .functioning .btn-container {
     flex-direction: row;
   }
 }
