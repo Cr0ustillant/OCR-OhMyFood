@@ -104,6 +104,17 @@ button:hover {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
+@keyframes dishes-animation {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 * {
   font-family: 'Roboto', serif;
 }
@@ -221,17 +232,6 @@ main section .dishes:nth-child(4) {
   animation-delay: 0.9s;
 }
 
-@keyframes dishes-animation {
-  from {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
 main section .dishes h2 {
   font-size: 16px;
   font-weight: 300;
@@ -317,8 +317,12 @@ main section .button-container {
 }
 
 @media (min-width: 1440px) {
-  .main-container {
-    max-width: 1440px;
+  .main-container header .logo-container {
+    padding: 30px 17px;
+    box-shadow: none;
+  }
+  .main-container header .logo-container img {
+    width: 200px;
   }
   .main-container main .banner img {
     height: 383px;
@@ -331,10 +335,39 @@ main section .button-container {
   }
   .main-container main .section-container section {
     width: 100%;
-    padding: 0px 50px 0px 211px;
+    align-items: center;
   }
   .main-container main .section-container section .rating {
     justify-content: center;
     gap: 24px;
+  }
+  .main-container main .section-container section .dishes {
+    min-width: 634px;
+  }
+  .main-container footer {
+    display: flex;
+    height: 54px;
+    padding: 30px 25px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 16px;
+  }
+  .main-container footer h3 {
+    margin: 0px 10px 0px 0px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .main-container footer ul {
+    display: flex;
+    gap: 27px;
+  }
+  .main-container footer ul li:nth-child(even) {
+    margin-right: 55px;
+  }
+  .main-container footer ul li:nth-child(3), .main-container footer ul li:nth-child(4) {
+    font-weight: 400;
+  }
+  .main-container footer ul li {
+    margin: 0;
   }
 }
