@@ -1,11 +1,7 @@
-/* var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%)); */
-// var(--Background, #F6F6F6);
-// var(--Grey, #353535);
-// background: var(--Primary, #9356DC);
-// background: var(--White, #FFF);
-
 @import "_commun";
 @import "animationLoader";
+@import "typo";
+@import "button";
 
 body {
   display: flex;
@@ -25,7 +21,7 @@ body {
   .loader {
     height: 100%;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--background-loader);
     position: absolute;
     opacity: 1;
     z-index: 3;
@@ -55,7 +51,7 @@ body {
       }
         
       span {
-        color: white;
+        color: var(--White);
       }
       
       .point-container {
@@ -85,7 +81,7 @@ body {
   }
 }
 
-  main {
+main {
     display: flex;
     flex-direction: column;
 
@@ -150,14 +146,14 @@ body {
           border: 5px solid var(--Primary, #9356dc);
           background-color: var(--Primary, #9356dc);
           text-align: center;
-          color: white;
+          color: var(--White);
           font-size: 14px;
         }
 
         i {
           font-size: 20px;
           margin-left: 20px;
-          color: #7e7e7e;
+          color: var(--btn-notify);
         }
 
         i:hover {
@@ -193,7 +189,7 @@ body {
           flex-direction: column;
           width: 100%;
           border-radius: 15px 15px 15px 15px;
-          background-color: white;
+          background-color: var(--White);
 
           img {
             width: 100%;
@@ -284,7 +280,7 @@ body {
         }
       }
     }
-  }
+}
 
 // MediaQuieries
 
@@ -359,20 +355,24 @@ body {
         font-size: 18px;
       }
 
-      li:nth-child(even) {
-        margin-right: 55px;
-      }
-
-      li:nth-child(1n + 3) {
-        font-weight: 400;
+      a {
+        li {
+          margin: 0px 55px 0px 0px;
+          font-weight: 400;
+        }
       }
 
       ul {
         display: flex;
         gap: 27px;
 
+        li:nth-child(2) {
+          margin: 0px 55px 0px 0px;
+          font-weight: 400;
+        }
+
         li {
-          margin: 0;
+          margin-bottom: 0px;
         }
       }
     }

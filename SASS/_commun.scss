@@ -1,25 +1,7 @@
-// Variable
-/* var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%)); */
-// var(--Background, #F6F6F6);
-// var(--Grey, #353535);
-// background: var(--Primary, #9356DC);
-// background: var(--White, #FFF);
-// background: var(--Green, #99E2D0);
-
-// https://zestedesavoir.com/tutoriels/672/reprenez-le-controle-de-vos-feuilles-de-style-avec-sass/les-bases-de-sass/la-directive-import/?utm_medium=email&utm_content=nov-18-has-completed-mentoring-session-student&bsft_clkid=c80a004f-84ff-4a36-b992-319fb5181947&bsft_uid=04e27a0f-2461-4228-879f-75c439e0010e&bsft_mid=977ca3ac-387d-4fc8-863d-ffef06d6d033&bsft_eid=7244055d-47f0-a6f2-c394-7a20ebb3a726&bsft_txnid=59f21314-2d6e-4e17-9fcb-d65e29a37bbc&bsft_mime_type=html&bsft_ek=2023-12-04T12%3A19%3A10Z&bsft_aaid=a265d396-7432-4eb2-9c9a-ba5eea75629e&bsft_tv=14
-
-
-                // FONT
-
-* {
-    font-family: 'Roboto', serif;
-}
-
 a {
     text-decoration: none;
     color: unset;
 }
-
 
 header {
   display: flex;
@@ -94,41 +76,5 @@ footer {
             font-size: 13px;
             margin-right: 10px;
         }
-    }
-}
-
-                // Button
-
-button {
-    border: none;
-    margin: 20px 0px;
-    width: 218px;
-    padding: 16px 10px;
-    border-radius: 25px;
-    color: white;
-    font-weight: 500;
-    font-size: 16px;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    background: var(
-        --Button-Gradient,
-      linear-gradient(0deg, #9256dc -11.44%, #ff79d9 123.93%)
-    );
-    transition: opacity 0.5s, box-shadow 0.5s ;
-    opacity: 1;
-  
-    &:hover {
-      opacity: 0.9;
-      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);    }
-}
-                // Animation
-
-@keyframes dishes-animation {
-    from {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0px);
-        opacity: 1;
     }
 }
