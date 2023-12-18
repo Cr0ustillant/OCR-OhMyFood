@@ -85,7 +85,7 @@ footer ul i {
 }
 
 :root {
-  --Button-Gradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  --Button-Gradient: linear-gradient(#FF79DA, #9356DC);
   --background-loader: white;
   --Background: #F6F6F6;
   --White: #FFF;

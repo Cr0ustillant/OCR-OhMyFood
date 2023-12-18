@@ -114,14 +114,14 @@ main {
         margin: 0;
       }
 
-      .btn-container {
+      ul {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
       }
 
-      .btn-functioning {
+      li {
         display: flex;
         position: relative;
         align-items: center;
@@ -137,7 +137,7 @@ main {
         background: var(--Background, #f6f6f6);
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
-        .btn-notify {
+        div {
           position: absolute;
           left: -12px;
           width: 14px;
@@ -155,12 +155,11 @@ main {
           margin-left: 20px;
           color: var(--btn-notify);
         }
+      }
 
-        i:hover {
-          background: var(--Primary, #9356dc);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+      li:hover {
+        i {
+          color: var(--Primary);
         }
       }
     }
@@ -183,7 +182,7 @@ main {
         flex-direction: column;
         gap: 18px;
 
-        .card {
+        article {
           position: relative;
           display: flex;
           flex-direction: column;
@@ -215,26 +214,22 @@ main {
 
           .card-content {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             height: 60px;
             margin: 0;
             padding: 10px 10px 3px 12px;
-            gap: 10px;
-            justify-content: space-between;
+              
+            h3 {
+              margin: 0;
+            }
 
-            .card-txt {
-
-              .card-title {
-                margin: 0;
-              }
-
-              .card-subtitle {
-                margin: 5px 0px;
-                font-size: 17px;
-                font-weight: 300;
-              }
+            p {
+              margin: 5px 0px 5px 0px;
+              font-size: 17px;
+              font-weight: 300;
             }
           }
+
           .card-rating {
             display: flex;
             position: absolute;
@@ -250,10 +245,7 @@ main {
             .hovered-heart {
               opacity: 0;
               transition: opacity 0.5s ease-in;
-              background: var(
-                --Button-Gradient,
-                linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%)
-              );
+              background: var(--Button-Gradient);
               background-clip: inherit;
               -webkit-background-clip: text;
               color: transparent;
@@ -297,7 +289,6 @@ main {
 
 @media (min-width: 1024px) {
   .main-container {
-    max-width: 1440px;
 
     header {
       .logo-container {
@@ -315,7 +306,7 @@ main {
     .functioning {
       padding: 50px 180px;
 
-      .btn-container {
+      ul {
         width: 100%;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -381,7 +372,7 @@ main {
   .main-container {
 
     .functioning {
-      .btn-container {
+      ul {
         flex-direction: row;
       }
     }

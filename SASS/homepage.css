@@ -4,18 +4,27 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: #EAEAEA;
+  background-color: var(--background-location);
 }
 
 header i {
   font-weight: 500;
-  margin-right: 15px;
   font-style: normal;
+  color: var(--Grey);
+  margin-left: 45px;
 }
 
-header p {
+header input {
+  outline: none;
+  border: none;
+  margin: 15px 0px 15px 17px;
+  background-color: var(--background-location);
+}
+
+header input::placeholder {
   font-weight: 500;
-  font-style: normal;
+  font-size: 16px;
+  color: var(--Grey);
 }
 
 header .logo-container {
@@ -23,16 +32,12 @@ header .logo-container {
   position: relative;
   width: 100%;
   gap: 42px;
-  padding: 14px 17px 13px 17px;
+  padding: 25px 17px 25px 17px;
   background-color: #fff;
   justify-content: center;
   align-items: center;
   text-align: center;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-}
-
-header .logo-container img {
-  width: 162px;
 }
 
 header .logo-container .arrow {
@@ -94,10 +99,11 @@ footer ul i {
 }
 
 :root {
-  --Button-Gradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  --Button-Gradient: linear-gradient(#FF79DA, #9356DC);
   --background-loader: white;
   --Background: #F6F6F6;
   --White: #FFF;
+  --background-location: #EAEAEA;
   --Grey: #353535;
   --btn-notify: #7e7e7e;
   --Primary: #9356DC;
@@ -249,14 +255,14 @@ main .functioning h2 {
   margin: 0;
 }
 
-main .functioning .btn-container {
+main .functioning ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-main .functioning .btn-functioning {
+main .functioning li {
   display: flex;
   position: relative;
   align-items: center;
@@ -273,7 +279,7 @@ main .functioning .btn-functioning {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
-main .functioning .btn-functioning .btn-notify {
+main .functioning li div {
   position: absolute;
   left: -12px;
   width: 14px;
@@ -286,17 +292,14 @@ main .functioning .btn-functioning .btn-notify {
   font-size: 14px;
 }
 
-main .functioning .btn-functioning i {
+main .functioning li i {
   font-size: 20px;
   margin-left: 20px;
   color: var(--btn-notify);
 }
 
-main .functioning .btn-functioning i:hover {
-  background: var(--Primary, #9356dc);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+main .functioning li:hover i {
+  color: var(--Primary);
 }
 
 main .restaurants {
@@ -317,7 +320,7 @@ main .restaurants .cards-container {
   gap: 18px;
 }
 
-main .restaurants .cards-container .card {
+main .restaurants .cards-container article {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -326,14 +329,14 @@ main .restaurants .cards-container .card {
   background-color: var(--White);
 }
 
-main .restaurants .cards-container .card img {
+main .restaurants .cards-container article img {
   width: 100%;
   height: 200px;
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
 }
 
-main .restaurants .cards-container .card .new {
+main .restaurants .cards-container article .new {
   display: flex;
   text-align: center;
   position: absolute;
@@ -348,27 +351,25 @@ main .restaurants .cards-container .card .new {
   background-color: var(--Green, #99e2d0);
 }
 
-main .restaurants .cards-container .card .card-content {
+main .restaurants .cards-container article .card-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 60px;
   margin: 0;
   padding: 10px 10px 3px 12px;
-  gap: 10px;
-  justify-content: space-between;
 }
 
-main .restaurants .cards-container .card .card-content .card-txt .card-title {
+main .restaurants .cards-container article .card-content h3 {
   margin: 0;
 }
 
-main .restaurants .cards-container .card .card-content .card-txt .card-subtitle {
-  margin: 5px 0px;
+main .restaurants .cards-container article .card-content p {
+  margin: 5px 0px 5px 0px;
   font-size: 17px;
   font-weight: 300;
 }
 
-main .restaurants .cards-container .card .card-rating {
+main .restaurants .cards-container article .card-rating {
   display: flex;
   position: absolute;
   bottom: 0;
@@ -377,34 +378,34 @@ main .restaurants .cards-container .card .card-rating {
   height: 50px;
 }
 
-main .restaurants .cards-container .card .card-rating i {
+main .restaurants .cards-container article .card-rating i {
   font-size: 22px;
 }
 
-main .restaurants .cards-container .card .card-rating .hovered-heart {
+main .restaurants .cards-container article .card-rating .hovered-heart {
   opacity: 0;
   transition: opacity 0.5s ease-in;
-  background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%));
+  background: var(--Button-Gradient);
   background-clip: inherit;
   -webkit-background-clip: text;
   color: transparent;
 }
 
-main .restaurants .cards-container .card .card-rating .hovered-heart:hover {
+main .restaurants .cards-container article .card-rating .hovered-heart:hover {
   opacity: 2;
   z-index: 1;
 }
 
-main .restaurants .cards-container .card .card-rating .default-heart {
+main .restaurants .cards-container article .card-rating .default-heart {
   position: absolute;
   z-index: 1;
 }
 
-main .restaurants .cards-container .card .card-rating .default-heart:hover {
+main .restaurants .cards-container article .card-rating .default-heart:hover {
   opacity: 0;
 }
 
-main .restaurants .cards-container .card .card-rating .default-heart:hover ~ .hovered-heart {
+main .restaurants .cards-container article .card-rating .default-heart:hover ~ .hovered-heart {
   opacity: 1;
 }
 
@@ -417,9 +418,6 @@ main .restaurants .cards-container .card .card-rating .default-heart:hover ~ .ho
 }
 
 @media (min-width: 1024px) {
-  .main-container {
-    max-width: 1440px;
-  }
   .main-container header .logo-container {
     box-shadow: none;
   }
@@ -430,7 +428,7 @@ main .restaurants .cards-container .card .card-rating .default-heart:hover ~ .ho
   .main-container .functioning {
     padding: 50px 180px;
   }
-  .main-container .functioning .btn-container {
+  .main-container .functioning ul {
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -480,7 +478,7 @@ main .restaurants .cards-container .card .card-rating .default-heart:hover ~ .ho
 }
 
 @media (min-width: 1440px) {
-  .main-container .functioning .btn-container {
+  .main-container .functioning ul {
     flex-direction: row;
   }
 }
