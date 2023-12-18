@@ -1,7 +1,7 @@
-@import "_commun";
-@import "animationLoader";
-@import "typo";
-@import "button";
+@import "_header-footer";
+@import "_animationLoader";
+@import "_typo";
+@import "_button";
 
 body {
   display: flex;
@@ -281,8 +281,6 @@ main {
       }
     }
 }
-
-// MediaQuieries
 
 @media (min-width: 768px) {
   .main-container {
