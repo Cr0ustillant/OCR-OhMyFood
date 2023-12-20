@@ -47,6 +47,7 @@ header .logo-container .arrow {
 
 header .logo-container .arrow i {
   font-size: 25px;
+  margin: 0;
 }
 
 footer {
@@ -76,4 +77,35 @@ footer ul i {
   width: 11px;
   font-size: 13px;
   margin-right: 10px;
+}
+
+@media (min-width: 1440px) {
+  footer {
+    display: flex;
+    height: 54px;
+    padding: 30px 25px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 16px;
+  }
+  footer h3 {
+    margin: 0px 10px 0px 0px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  footer a li {
+    margin: 0px 55px 0px 0px;
+    font-weight: 400;
+  }
+  footer ul {
+    display: flex;
+    gap: 27px;
+  }
+  footer ul li:nth-child(2) {
+    margin: 0px 55px 0px 0px;
+    font-weight: 400;
+  }
+  footer ul li {
+    margin-bottom: 0px;
+  }
 }
