@@ -180,13 +180,13 @@ body {
   overflow: hidden;
 }
 
-main .banner img {
+.main-container main .banner img {
   width: 100%;
   height: 275px;
   object-fit: cover;
 }
 
-main section {
+.main-container main section {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -198,54 +198,54 @@ main section {
   background-color: var(--Background, #f6f6f6);
 }
 
-main section .rating {
+.main-container main section .rating {
   display: flex;
   justify-content: space-between;
   position: relative;
   align-items: center;
 }
 
-main section .rating h1 {
+.main-container main section .rating h1 {
   margin-bottom: 0;
   font-size: 28px;
   font-weight: 400;
   font-family: "Shrikhand", serif;
 }
 
-main section .rating .heart-container {
+.main-container main section .rating .heart-container {
   display: flex;
   width: 22px;
   margin-right: 25px;
 }
 
-main section .rating .hovered-heart {
+.main-container main section .rating .hovered-heart {
   opacity: 0;
   position: absolute;
   font-size: 22px;
-  transition: all 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
   background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-main section .rating .default-heart {
+.main-container main section .rating .default-heart {
   position: absolute;
   bottom: 10px;
   font-size: 22px;
   z-index: 1;
 }
 
-main section .rating .hovered-heart:hover {
+.main-container main section .rating .hovered-heart:hover {
   opacity: 1;
   z-index: 2;
 }
 
-main section .rating .default-heart:hover {
+.main-container main section .rating .default-heart:hover {
   opacity: 0;
 }
 
-main section .rating .default-heart:hover ~ .hovered-heart {
+.main-container main section .rating .default-heart:hover ~ .hovered-heart {
   opacity: 1;
   transition: all 0.3s ease-in;
   background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%));
@@ -254,12 +254,12 @@ main section .rating .default-heart:hover ~ .hovered-heart {
   -webkit-text-fill-color: transparent;
 }
 
-main section .row {
+.main-container main section .row {
   width: 40px;
   border-bottom: solid 3px var(--Green, #99e2d0);
 }
 
-main section .dishes {
+.main-container main section .dishes {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -267,25 +267,25 @@ main section .dishes {
   animation: dishes-animation 0.9s linear;
 }
 
-main section .dishes:nth-child(2) {
+.main-container main section .dishes:nth-child(2) {
   animation-delay: 0.3s;
 }
 
-main section .dishes:nth-child(3) {
+.main-container main section .dishes:nth-child(3) {
   animation-delay: 0.6s;
 }
 
-main section .dishes:nth-child(4) {
+.main-container main section .dishes:nth-child(4) {
   animation-delay: 0.9s;
 }
 
-main section .dishes h2 {
+.main-container main section .dishes h2 {
   font-size: 16px;
   font-weight: 300;
   margin: 0;
 }
 
-main section .dishes article {
+.main-container main section .dishes article {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -300,29 +300,29 @@ main section .dishes article {
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
 
-main section .dishes article h3 {
+.main-container main section .dishes article h3 {
   margin: 0;
   font-weight: 500;
   margin-bottom: 5px;
 }
 
-main section .dishes article .info {
+.main-container main section .dishes article .info {
   display: flex;
   justify-content: space-between;
 }
 
-main section .dishes article .info p {
+.main-container main section .dishes article .info p {
   margin: 0;
   font-size: 15px;
   font-weight: 300;
 }
 
-main section .dishes article .info span {
+.main-container main section .dishes article .info span {
   font-size: 15px;
   font-weight: 700;
 }
 
-main section .dishes article .ticket {
+.main-container main section .dishes article .ticket {
   position: absolute;
   display: flex;
   width: 60px;
@@ -338,30 +338,42 @@ main section .dishes article .ticket {
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
 
-main section .dishes article .ticket i {
+.main-container main section .dishes article .ticket i {
   font-size: 24px;
   border-radius: 90px;
   color: var(--White);
 }
 
-main section .dishes article:hover {
+.main-container main section .dishes article:hover {
   padding-right: 65px;
 }
 
-main section .dishes article:hover p,
-main section .dishes article:hover i {
+.main-container main section .dishes article:hover p,
+.main-container main section .dishes article:hover i {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-main section .dishes article:hover .ticket {
+.main-container main section .dishes article:hover .ticket {
   transform: translateX(0);
 }
 
-main section .button-container {
+.main-container main section .button-container {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 320px) {
+  .main-container main section .rating .heart-container {
+    margin: 20px 25px 0px 0px;
+  }
+  .main-container main section .rating .heart-container .default-heart {
+    position: inherit;
+  }
+  .main-container main section .dishes article {
+    white-space: wrap;
+  }
 }
 
 @media (min-width: 768px) {
