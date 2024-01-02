@@ -1,11 +1,6 @@
 
 @mixin animation-heart-after {
   transition: opacity 0.3s ease-in;
-  opacity: 0;
-  background: var(--Button-Gradient);
-  background-clip: inherit;
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 @mixin animation-ticket-back {
