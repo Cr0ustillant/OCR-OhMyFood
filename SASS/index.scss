@@ -2,6 +2,7 @@
 @import "_animationLoader";
 @import "_typo";
 @import "_button";
+@import "mixin";
 
 body {
   display: flex;
@@ -184,12 +185,7 @@ main {
             }
 
             .hovered-heart {
-              opacity: 0;
-              transition: opacity 0.5s ease-in;
-              background: var(--Button-Gradient);
-              background-clip: inherit;
-              -webkit-background-clip: text;
-              color: transparent;
+              @include animation-heart-after;
 
               &:hover {
                 opacity: 2;
@@ -278,6 +274,7 @@ main {
     .functioning {
       ul {
         flex-direction: row;
+        flex-wrap: nowrap;
       }
     }
   }

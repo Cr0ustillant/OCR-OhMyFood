@@ -79,7 +79,7 @@ footer ul i {
   margin-right: 10px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   footer {
     display: flex;
     height: 54px;
@@ -420,8 +420,8 @@ main .restaurants .cards-container article .card-rating i {
 }
 
 main .restaurants .cards-container article .card-rating .hovered-heart {
+  transition: opacity 0.3s ease-in;
   opacity: 0;
-  transition: opacity 0.5s ease-in;
   background: var(--Button-Gradient);
   background-clip: inherit;
   -webkit-background-clip: text;
@@ -488,5 +488,6 @@ main .restaurants .cards-container article .card-rating .default-heart:hover ~ .
 @media (min-width: 1440px) {
   .main-container .functioning ul {
     flex-direction: row;
+    flex-wrap: nowrap;
   }
 }
