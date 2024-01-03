@@ -93,16 +93,16 @@ footer ul i {
     font-weight: 500;
     font-size: 18px;
   }
-  footer a li {
-    margin: 0px 55px 0px 0px;
-    font-weight: 400;
-  }
   footer ul {
     display: flex;
     gap: 27px;
   }
   footer ul li:nth-child(2) {
-    margin: 0px 55px 0px 0px;
+    margin: 0px 70px 0px 0px;
+    font-weight: 400;
+  }
+  footer ul li a {
+    margin: 0px 70px 0px 0px;
     font-weight: 400;
   }
   footer ul li {
