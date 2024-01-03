@@ -221,14 +221,19 @@ body {
             .default-heart{
               position: inherit;
             }
-            .hovered-heart{
-              
-            } 
           }
         }
         .dishes{
           article {
-            white-space: wrap;
+            h3 {
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+              
+            p {
+              overflow:hidden;
+              text-overflow: ellipsis;
+            }
           }
         }
       }

@@ -120,6 +120,7 @@ footer ul i {
   opacity: 1;
   z-index: 3;
   animation: loader-on 3s linear forwards;
+  -moz-animation: loader-on 3s linear forwards;
 }
 
 .main-container .loader-container .loader {
@@ -136,6 +137,7 @@ footer ul i {
   background: linear-gradient(rgba(163, 163, 163, 0.9), rgba(97, 97, 97, 0.887));
   box-shadow: 8px 8px 10px 2px rgba(0, 0, 0, 0.605);
   animation: loader-on 3s linear forwards;
+  -moz-animation: loader-on 3s linear forwards;
 }
 
 .main-container .loader-container .loader img {
@@ -175,10 +177,10 @@ footer ul i {
 }
 
 @keyframes loader-on {
-  from {
+  0% {
   }
-  to {
-    display: none;
+  100% {
+    visibility: hidden;
   }
 }
 
@@ -237,30 +239,6 @@ button {
 button:hover {
   opacity: 0.9;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-}
-
-:root {
-  --Button-Gradient: linear-gradient(#FF79DA, #9356DC);
-  --background-loader: white;
-  --Background: #F6F6F6;
-  --White: #FFF;
-  --background-location: #EAEAEA;
-  --Grey: #353535;
-  --btn-notify: #7e7e7e;
-  --Primary: #9356DC;
-  --Green: #99E2D0;
-  --Green-Font: #008766;
-  --Blue: #89C8FA;
-  --Blue-Secondary: #003A68;
-}
-
-* {
-  font-family: 'Roboto', serif;
-}
-
-a {
-  text-decoration: none;
-  color: unset;
 }
 
 body {
@@ -360,6 +338,12 @@ main .functioning li i {
   color: var(--btn-notify);
 }
 
+main .functioning li p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 main .functioning li:hover i {
   color: var(--Primary);
 }
@@ -445,16 +429,16 @@ main .restaurants .cards-container article .card-rating i {
 }
 
 main .restaurants .cards-container article .card-rating .hovered-heart {
-  transition: opacity 0.3s ease-in;
   opacity: 0;
-  background: var(--Button-Gradient);
-  background-clip: inherit;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%));
+  background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.3s ease-in;
 }
 
 main .restaurants .cards-container article .card-rating .hovered-heart:hover {
-  opacity: 2;
+  opacity: 1;
   z-index: 1;
 }
 

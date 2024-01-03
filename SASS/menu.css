@@ -166,30 +166,6 @@ button:hover {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
-:root {
-  --Button-Gradient: linear-gradient(#FF79DA, #9356DC);
-  --background-loader: white;
-  --Background: #F6F6F6;
-  --White: #FFF;
-  --background-location: #EAEAEA;
-  --Grey: #353535;
-  --btn-notify: #7e7e7e;
-  --Primary: #9356DC;
-  --Green: #99E2D0;
-  --Green-Font: #008766;
-  --Blue: #89C8FA;
-  --Blue-Secondary: #003A68;
-}
-
-* {
-  font-family: 'Roboto', serif;
-}
-
-a {
-  text-decoration: none;
-  color: unset;
-}
-
 body {
   display: flex;
   width: 100%;
@@ -396,8 +372,13 @@ body {
   .main-container main section .rating .heart-container .default-heart {
     position: inherit;
   }
-  .main-container main section .dishes article {
-    white-space: wrap;
+  .main-container main section .dishes article h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main-container main section .dishes article p {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 

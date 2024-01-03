@@ -10,6 +10,7 @@
     opacity: 1;
     z-index: 3;
     animation: loader-on 3s linear forwards;
+    -moz-animation: loader-on 3s linear forwards;
     
     .loader {
       display: flex;
@@ -19,12 +20,14 @@
       border-radius: 30px;
       border: solid black 2px;
       align-items: center;
-      justify-content:space-around;
+      justify-content: space-around;
       font-size: 24px;
       transform: scale(0.7);
-      background:linear-gradient(rgba(163, 163, 163, 0.9) , rgba(97, 97, 97, 0.887));
+      background: linear-gradient(rgba(163, 163, 163, 0.9) , rgba(97, 97, 97, 0.887));
       box-shadow: 8px 8px 10px 2px rgba(0, 0, 0, 0.605);
       animation: loader-on 3s linear forwards;
+      -moz-animation: loader-on 3s linear forwards;
+
   
       img {
         margin-top: 10px;
@@ -66,10 +69,10 @@
 }
 
 @keyframes loader-on {
-    from {
+    0% {
     }
-    to {
-      display: none;
+    100% {
+      visibility: hidden;
     }
 }
 
@@ -84,3 +87,4 @@
       transform: scale(1);
     }
 }
+
